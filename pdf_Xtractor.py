@@ -1,3 +1,10 @@
+'''code is written by: Sumit Arjun.
+This code asks for storng Internet connection to download PDF's, so Please fullfill the requirements.
+The code is sample code for data extraction of institution data. 
+Do make changes according to the information ot data that is asked!!
+I am not responsible if your boss kicks you out, if inappropriate data is served to him..☠☠☠
+Edit count: 15'''
+
 import pandas as pd
 import requests
 import os
@@ -37,6 +44,7 @@ def extract_information_from_pdf(pdf_folder):
                         text = page.extract_text()
 
                         # Search for information in the text
+                        #pls remember to change the folowing prompt according to the data you need.
                         if "Name of the Institution" in text:
                             name_of_institution = text.split("Name of the Institution")[1].split("\n")[0].strip()
                         if "Name of the head of the Institution" in text:
@@ -64,9 +72,11 @@ def delete_pdf_files(pdf_folder):
     print("PDF files deleted successfully.")
 
 def main():
-    text_file = r"D:\work\quantum learning\software projects\pdf data extracter\inputs.txt"       
-    download_folder = r"D:\work\quantum learning\software projects\pdf data extracter\pdf folder"       
-    excel_file = "DATA.xlsx"          
+    text_file = r"inputs.txt"       #enter the path for your txt file where all links are stored
+    download_folder = r"pdf folder"       #enter the path of your pdf folder, where you want to store your downloaded pdf's
+    '''(Don't worry buddy, this data will be deleted, once all data is extracted..If you want to keep the pdfs, then 
+    simply stop the code from running when it gives you an alert message of pdf's got downloaded.)'''
+    excel_file = "DATA.xlsx"          #enter appropriate name of excel file or its path for data to be stored with .xlsx extension
 
     # Extract PDF links from text file
     pdf_links = extract_pdf_links(text_file)
