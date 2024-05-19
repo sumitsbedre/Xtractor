@@ -3,7 +3,7 @@ This code asks for storng Internet connection to download PDF's, so Please fullf
 The code is sample code for data extraction of institution data. 
 Do make changes according to the information ot data that is asked!!
 I am not responsible if your boss kicks you out, if inappropriate data is served to him..☠☠☠
-Edit count: 15'''
+Edit/Debug count: 15'''
 
 import pandas as pd
 import requests
