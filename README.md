@@ -16,9 +16,9 @@ Save to Excel: Writes the extracted information to an Excel file.
 Clean Up: Deletes the downloaded PDF files after processing.
 
 # Requirements
-Python 3.x (The latest version You can have)
-pandas
-requests
-pdfplumber
+-> Python 3.x (The latest version You can have)
+-> pandas
+-> requests
+-> pdfplumber
 
 code: pip install pandas requests pdfplumber
