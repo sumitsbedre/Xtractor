@@ -37,7 +37,7 @@ Clean Up: Deletes the downloaded PDF files after processing.
 <body>
     <div class="code-block">
         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-        <code>pip install pandas requests pdfplumber</code>
+        <code>pip install pandas requests pdfplumber os pdfplumber openpyxl</code>
     </div>
 </body>
 </html>
