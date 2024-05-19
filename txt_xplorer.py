@@ -1,7 +1,7 @@
-'''code is written by: Sumit Arjun.
-This code asks for storng Internet connection to download PDF's, so Please fullfill the requirements.
-The code is sample code for data extraction of institution data. 
-Do make changes according to the information ot data that is asked!!
+'''Code is written by: Sumit Arjun.
+This code is offline working one. 
+The code is sample code for data extraction of institution data from pre-collected data.Just kinda sorter. 
+Do make changes according to the information of data that is asked!!
 I am not responsible if your boss kicks you out, if inappropriate data is served to him..☠☠☠
 Edit/Debug count: 21'''
 
@@ -12,15 +12,13 @@ import openpyxl
 def extract_details(entry):
     details = {}
     
-    # Regular expressions for each detail
-    aff_no_re = re.compile(r'Affiliation No\.\s*(\S+)')
+    # Regular expressions for each detail. Regular expression depends on the data you are searching... 
     school_name_re = re.compile(r'Name:\s*(.+?)(?=\n|$)')
     head_name_re = re.compile(r'Head/Principal Name:\s*(.+?)(?=\n|$)')
     status_re = re.compile(r'Status of the School:\s*(.+?)(?=\n|$)')
     phone_re = re.compile(r'Phone No:\s*(.+?)(?=\n|$)')
     email_re = re.compile(r'Email:\s*(.+?)(?=\n|$)')
     
-    details['Affiliation Number'] = aff_no_re.search(entry).group(1) if aff_no_re.search(entry) else ''
     details['School Name'] = school_name_re.search(entry).group(1) if school_name_re.search(entry) else ''
     details['Head/Principal Name'] = head_name_re.search(entry).group(1) if head_name_re.search(entry) else ''
     details['Status of School'] = status_re.search(entry).group(1) if status_re.search(entry) else ''
@@ -29,7 +27,7 @@ def extract_details(entry):
     
     return details
 
-# Prompt the user for the file path of the text file
+# Prompt the user for the file path of the text file. pls provide better format of data. 
 file_path = input("Please enter the path of the text file: ")
 
 # Read the data from the text file
@@ -45,10 +43,10 @@ school_details = [extract_details(entry) for entry in entries if entry.strip()]
 # Create a new Excel workbook and select the active worksheet
 workbook = openpyxl.Workbook()
 sheet = workbook.active
-sheet.title = 'School Details'
+sheet.title = 'Details'
 
 # Define the headers
-headers = ['Affiliation Number', 'School Name', 'Head/Principal Name', 'Status of School', 'Phone No', 'Email']
+headers = ['School Name', 'Head/Principal Name', 'Status of School', 'Phone No', 'Email']
 
 # Write the headers to the worksheet
 for col_num, header in enumerate(headers, 1):
