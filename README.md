@@ -21,4 +21,4 @@ Clean Up: Deletes the downloaded PDF files after processing.
 -> requests
 -> pdfplumber
 
-code: pip install pandas requests pdfplumber
+pip install pandas requests pdfplumber
