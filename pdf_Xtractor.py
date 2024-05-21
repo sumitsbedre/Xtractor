@@ -1,5 +1,5 @@
 '''code is written by: Sumit Arjun.
-This code asks for storng Internet connection to download PDF's, so Please fullfill the requirements.
+This code asks for strong Internet connection to download PDF's, so Please fullfill the requirements.
 The code is sample code for data extraction of institution data. 
 Do make changes according to the information of data that is asked!!
 I am not responsible if your boss kicks you out, if inappropriate data is served to him..☠☠☠
